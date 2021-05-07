@@ -9,7 +9,6 @@ class EducationContainer extends React.Component {
   componentDidMount() {
     this.props.initializeEducation();
   }
-  test = [1, 2, 3];
   render() {
     return (
       <div id="EducationContainer">
@@ -30,11 +29,11 @@ class EducationContainer extends React.Component {
               </li>
             );
           })}
-                  <hr />
-
+          <hr />
         </ul>
-        <button onClick={this.createNew} id="addSchool">Add Schooling</button>
-
+        <button onClick={this.createNew} id="addSchool">
+          Add Schooling
+        </button>
       </div>
     );
   }

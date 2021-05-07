@@ -18,16 +18,21 @@ ul {
 }
 #educationContainer{
   width: 100%;
-  display: inline-block;
+  display: block;
 }
 .schoolingInfo {
   width: 300px;
-  margin-top: 20px;
+  margin-bottom: 30px;
+  display: inline-block;
 }
-#workExp {
-  margin: 10px;
-  display: block;
-  float: left;
+
+#workContainer{
   width: 100%;
+  display: block;
+}
+.workInfo {
+  width: 500px;
+  margin-bottom: 30px;
+  display: inline-block;
 }
 
