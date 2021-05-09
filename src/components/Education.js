@@ -1,6 +1,10 @@
 import React from "react";
 
 class Education extends React.Component {
+  handleClick = (e) => {
+    e.preventDefault();
+    this.props.deleteItem("education", this.props.id);
+  }
   render() {
     return (
       <div>
@@ -51,6 +55,8 @@ class Education extends React.Component {
             data-key={this.props.id}
           />
         </label>
+        <button onClick={this.handleClick}>Remove</button>
+
       </div>
     );
   }

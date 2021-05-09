@@ -14,7 +14,16 @@ class FormContainer extends Component {
       work: [],
     };
   }
-  deleteItem = (e) => {};
+  deleteItem = (arrayName, id) => {
+    const tempArr = this.state[arrayName];
+    const index = tempArr.findIndex(
+      (element) => element.id === id
+    );
+    tempArr.splice(index, 1);
+    this.setState({
+      [arrayName]: tempArr,
+    })
+  };
   handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -62,10 +71,9 @@ class FormContainer extends Component {
     console.log(this.state);
   };
   //method to create a work or education entry in the array
-  createNewItem = (identifier, object) => {
-    console.log(object)
+  createNewItem = (arrayName, object) => {
     this.setState({
-      [identifier]: [...this.state[identifier], object],
+      [arrayName]: [...this.state[arrayName], object],
     });
   };
   render() {
@@ -76,12 +84,14 @@ class FormContainer extends Component {
           handleChange={this.handleChange}
           state={this.state}
           createNewItem={this.createNewItem}
+          deleteItem={this.deleteItem}
         />
         <WorkContainer
           handleChange={this.handleChange}
           state={this.state}
           initializeWork={this.initializeWork}
           createNewItem={this.createNewItem}
+          deleteItem={this.deleteItem}
         />
         {/* <button id="submit">Submit</button> */}
       </form>

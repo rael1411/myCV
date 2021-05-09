@@ -36,6 +36,7 @@ class WorkContainer extends React.Component {
                     key={item.id}
                     id={item.id}
                     index={index}
+                    deleteItem={this.props.deleteItem}
                   />
                 }
               </li>
