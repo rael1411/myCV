@@ -50,7 +50,6 @@ class FormContainer extends Component {
       const position = tempArr.findIndex(
         (element) => element.id === e.target.dataset.key
       );
-      console.log(position);
       tempArr[position][name] = value;
       this.setState({
         work: tempArr,
@@ -64,6 +63,7 @@ class FormContainer extends Component {
   };
   //method to create a work or education entry in the array
   createNewItem = (identifier, object) => {
+    console.log(object)
     this.setState({
       [identifier]: [...this.state[identifier], object],
     });

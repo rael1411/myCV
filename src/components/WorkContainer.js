@@ -19,7 +19,7 @@ class WorkContainer extends React.Component {
     this.props.createNewItem("work", this.newObj());
   };
   componentDidMount() {
-    this.props.createNewItem("work", this.newObj);
+    this.props.createNewItem("work", this.newObj());
   }
   render() {
     return (
