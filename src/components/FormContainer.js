@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import GeneralInfo from "./GeneralInfo";
 import EducationContainer from "./EducationContainer";
 import WorkContainer from "./WorkContainer";
-import uniqid from "uniqid";
 
 class FormContainer extends Component {
   constructor() {
@@ -15,9 +14,7 @@ class FormContainer extends Component {
       work: [],
     };
   }
-  deleteItem = (e) => {
-    
-  }
+  deleteItem = (e) => {};
   handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -65,29 +62,10 @@ class FormContainer extends Component {
     }
     console.log(this.state);
   };
-  initializeWork = (e) => {
-    const obj = {
-      companyName: "",
-      mainTasks: "",
-      jobStartDate: "",
-      jobEndDate: "",
-      positionTitle: "",
-      id: uniqid(),
-    };
+  //method to create a work or education entry in the array
+  createNewItem = (identifier, object) => {
     this.setState({
-      work: [...this.state.work, obj],
-    });
-  };
-  initializeEducation = (e) => {
-    const obj = {
-      schoolName: "",
-      educationStartDate: "",
-      educationEndDate: "",
-      educationTitle: "",
-      id: uniqid(),
-    };
-    this.setState({
-      education: [...this.state.education, obj],
+      [identifier]: [...this.state[identifier], object],
     });
   };
   render() {
@@ -96,10 +74,15 @@ class FormContainer extends Component {
         <GeneralInfo handleChange={this.handleChange} state={this.state} />
         <EducationContainer
           handleChange={this.handleChange}
-          initializeEducation={this.initializeEducation}
           state={this.state}
+          createNewItem={this.createNewItem}
         />
-        <WorkContainer handleChange={this.handleChange} state={this.state} initializeWork={this.initializeWork} />
+        <WorkContainer
+          handleChange={this.handleChange}
+          state={this.state}
+          initializeWork={this.initializeWork}
+          createNewItem={this.createNewItem}
+        />
         {/* <button id="submit">Submit</button> */}
       </form>
     );

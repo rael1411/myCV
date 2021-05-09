@@ -1,13 +1,24 @@
 import React from "react";
 import Education from "./Education";
+import uniqid from "uniqid";
 
 class EducationContainer extends React.Component {
+  newObj = () => {
+    const obj = {
+      schoolName: "",
+      educationStartDate: "",
+      educationEndDate: "",
+      educationTitle: "",
+      id: uniqid(),
+    };
+    return obj;
+  };
   createNew = (e) => {
     e.preventDefault();
-    this.props.initializeEducation();
+    this.props.createNewItem("education", this.newObj());
   };
   componentDidMount() {
-    this.props.initializeEducation();
+    this.props.createNewItem("education", this.newObj());
   }
   render() {
     return (

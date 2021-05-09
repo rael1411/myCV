@@ -1,18 +1,30 @@
 import React from "react";
 import Work from "./Work";
+import uniqid from "uniqid";
 
 class WorkContainer extends React.Component {
+  newObj = () => {
+    const obj = {
+      companyName: "",
+      mainTasks: "",
+      jobStartDate: "",
+      jobEndDate: "",
+      positionTitle: "",
+      id: uniqid(),
+    };
+    return obj;
+  };
   createNew = (e) => {
     e.preventDefault();
-    this.props.initializeWork();
+    this.props.createNewItem("work", this.newObj());
   };
   componentDidMount() {
-    this.props.initializeWork();
+    this.props.createNewItem("work", this.newObj);
   }
   render() {
     return (
       <div id="workContainer">
-          <h2>Work Experience</h2>
+        <h2>Work History</h2>
         <ul>
           {this.props.state.work.map((item, index) => {
             return (
