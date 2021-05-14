@@ -16,7 +16,7 @@ textarea {
 ul {
   list-style-type: none;
 }
-#educationContainer{
+#educationContainer {
   width: 100%;
   display: block;
 }
@@ -26,13 +26,95 @@ ul {
   display: inline-block;
 }
 
-#workContainer{
+#workContainer {
   width: 100%;
   display: block;
 }
 .workInfo {
-  width: 500px;
+  width: 450px;
   margin-bottom: 30px;
   display: inline-block;
 }
+.removeButton {
+  margin-top: 20px;
+}
+#contentContainer {
+  width: 800px;
+  margin: auto;
+  background-color: whitesmoke;
+}
+.displayGenInfo {
+  padding: 20px;
+  list-style-type: none;
+  background-color: #add8e6;
+}
+.displayGenInfo > h1 {
+  font-size: 50px;
+  margin-left: 20px;
+}
+.sectionTitle {
+  font-size: 25px;
+  margin-left: 20px;
+  text-transform: uppercase;
+}
+.description {
+  font-size: 13px;
+}
+.displayJobInfo {
+  width: 40%;
+  display: inline-block;
+  margin: 20px;
+  margin-top: 0px;
+  box-sizing: border-box;
+}
 
+footer {
+  background-color: #add8e6;
+  height: 80px;
+  width: 100%;
+  display: flex;
+}
+#email {
+  flex: 1;
+  align-self: center;
+  margin-right: 40px;
+}
+#phoneNumber {
+  margin-left: 40px;
+  flex: 1;
+  align-self: center;
+}
+#emptySpan {
+  flex: 2;
+  align-self: center;
+}
+.workDates {
+  font-size: 12px;
+}
+.positionTitle {
+  font-size: 20px;
+}
+.companyName {
+  font-size: 14px;
+}
+#displayEducationInfoContainer {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.displayEducationInfo {
+  display: inline-block;
+  margin: 10px;
+  margin-top: 0px;
+  box-sizing: border-box;
+  font-size: 14px;
+  flex: 1;
+  flex-basis: 20rem;
+  width: 30%;
+  height: 150px;
+  box-sizing: border-box;
+}
+.educationTitle{
+  font-size: 18px;
+  font-weight: bold;
+}

@@ -28,11 +28,11 @@ function GeneralInfo(props) {
           Phone Number:
           <input
             type="text"
-            name="number"
+            name="phoneNumber"
             onChange={props.handleChange}
             placeholder="phone number"
             pattern="[0-9]*"
-            value={props.state.number}
+            value={props.state.phoneNumber}
           />
       </label>
       <hr />

@@ -15,7 +15,7 @@ class Work extends React.Component {
             name="companyName"
             placeholder="Company Name"
             onChange={this.props.handleChange}
-            value={this.props.state.companyName}
+            value={this.props.state.work[this.props.index].companyName}
             data-key={this.props.id}
           />
         </label>
@@ -26,7 +26,7 @@ class Work extends React.Component {
             name="positionTitle"
             placeholder="Position Title"
             onChange={this.props.handleChange}
-            value={this.props.state.positionTitle}
+            value={this.props.state.work[this.props.index].positionTitle}
             data-key={this.props.id}
           />
         </label>
@@ -38,7 +38,7 @@ class Work extends React.Component {
             name="mainTasks"
             placeholder="Main Tasks"
             onChange={this.props.handleChange}
-            value={this.props.state.mainTasks}
+            value={this.props.state.work[this.props.index].mainTasks}
             data-key={this.props.id}
           />
         </label>
@@ -49,7 +49,7 @@ class Work extends React.Component {
             name="jobStartDate"
             placeholder=""
             onChange={this.props.handleChange}
-            value={this.props.state.jobDateStart}
+            value={this.props.state.work[this.props.index].jobStartDate}
             data-key={this.props.id}
           />
         </label>
@@ -60,11 +60,11 @@ class Work extends React.Component {
             name="jobEndDate"
             placeholder=""
             onChange={this.props.handleChange}
-            value={this.props.state.jobDateEnd}
+            value={this.props.state.work[this.props.index].jobEndDate}
             data-key={this.props.id}
           />
         </label>
-        <button onClick={this.handleClick}>remove</button>
+        <button onClick={this.handleClick} className="removeButton">remove</button>
       </div>
     );
   }

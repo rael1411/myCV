@@ -1,14 +1,15 @@
-import './App.css';
+import "./App.css";
 import React from "react";
-import FormContainer from "./components/FormContainer"
+import FormContainer from "./components/FormContainer";
 
-function App() {
-
-  return (
-    <div>
-      <FormContainer />
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <FormContainer />
+      </div>
+    );
+  }
 }
 
 export default App;

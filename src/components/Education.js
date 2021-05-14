@@ -55,7 +55,7 @@ class Education extends React.Component {
             data-key={this.props.id}
           />
         </label>
-        <button onClick={this.handleClick}>Remove</button>
+        <button onClick={this.handleClick} className="removeButton">Remove</button>
 
       </div>
     );
