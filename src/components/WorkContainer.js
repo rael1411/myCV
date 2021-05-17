@@ -42,9 +42,10 @@ class WorkContainer extends React.Component {
               </li>
             );
           })}
-          <button onClick={this.createNew}>Add New</button>
+         
         </ul>
         <hr />
+        <button onClick={this.createNew} className="cvButton">Add New</button>
       </div>
     );
   }

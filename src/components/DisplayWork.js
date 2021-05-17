@@ -17,7 +17,7 @@ class DisplayWork extends React.Component {
                       {item.jobStartDate} - {item.jobEndDate}
                     </p>
                     {item.mainTasks.length !== 0 && (
-                      <p className="description">Main Tasks: {item.mainTasks}</p>
+                      <p className="description">{item.mainTasks}</p>
                     )}
                   </li>
                 );

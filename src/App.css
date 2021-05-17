@@ -114,7 +114,38 @@ footer {
   height: 150px;
   box-sizing: border-box;
 }
-.educationTitle{
+.educationTitle {
   font-size: 18px;
+  font-weight: bold;
+}
+.cvButton {
+  background-color: #FF6F61;
+  border-radius: 8px;
+  width: 8em;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  transition-duration: 0.4s;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+}
+.cvButton:hover {
+  background-color: #fc5141;
+}
+#generalInfo label input{
+  margin-left: 40px;
+}
+#generalInfo label{
+  margin-left: 40px;
+}
+input{
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.removeButton{
+  border: none;
+  background-color: rgb(255, 52, 52);
+  padding: 10px 15px;
+  color:white;
   font-weight: bold;
 }

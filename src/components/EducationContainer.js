@@ -43,7 +43,7 @@ class EducationContainer extends React.Component {
           })}
           <hr />
         </ul>
-        <button onClick={this.createNew} id="addSchool">
+        <button onClick={this.createNew} className="cvButton">
           Add Schooling
         </button>
       </div>

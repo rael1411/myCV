@@ -17,8 +17,9 @@ class Content extends React.Component {
         }}
       >
         <DisplayHeader state={this.props.state}/>
-        <DisplayWork state={this.props.state} />
-        <DisplayEducation state={this.props.state}/>
+        
+        {this.props.state.work.length !== 0 && <DisplayWork state={this.props.state} /> }
+        {this.props.state.education.length !== 0 && <DisplayEducation state={this.props.state}/> }
         <DisplayFooter state={this.props.state}/>
         <button onClick={this.handleClick}>Edit</button>
 
